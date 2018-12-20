@@ -1,0 +1,766 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans');
+
+$color1: #646BEB;
+$color2: #6BDAED;
+$color3: #5B5A5C;
+$color4: #DCDCDC;
+$color5: white;
+$color6: black;
+
+$alpha1: 0.5;
+$alpha2: 1;
+
+$bg-gradient: linear-gradient(-45deg, $color1, $color2);
+
+$fontset1: 'Work Sans',
+sans-serif;
+$fontset2: 'Open Sans',
+sans-serif;
+
+$breekpunt1: 450px;
+$breekpunt2: 650px;
+$breekpunt3: 1200px;
+
+
+/* Navigatiebar*/
+.nav {
+    background-color: $color2 !important;
+}
+
+.navbar {
+    background-color: $color5 !important;
+}
+
+.navbar-brand {
+    font-family: $fontset1;
+    color: $color1 !important;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.nav-item {
+    .nav-link {
+        padding-right: 1em !important;
+        color: $color6 !important;
+        margin-top: 10px;
+
+        &:hover {
+            border: 2px $color1 solid;
+            border-radius: 30px;
+        }
+
+        &:active {
+            border: 1px $color1 !important;
+            border-radius: 30px;
+        }
+    }
+
+    .doneerknop {
+        color: $color5 !important;
+        background-color: $color1;
+        padding: 10px;
+        border: 1px;
+        border-radius: 30px;
+    }
+}
+
+/*Titels/Paragrafen*/
+
+p {
+    color: $color6;
+
+}
+
+.tussentitel {
+    font-family: $fontset2;
+    color: $color3;
+    font-size: 32px;
+}
+
+h1 {
+    color: $color1;
+    font-size: 90px;
+    font-family: $fontset1;
+    font-weight: 800;
+    margin-top: 10%;
+    margin-bottom: 20px;
+
+    @media (max-width: $breekpunt1) {
+        font-size: 40px;
+    }
+    @media (max-width: $breekpunt2) {
+        font-size: 60px;
+    }
+    @media (max-width: $breekpunt3) {
+        font-size: 60px;
+    }
+}
+
+h2 {
+    font-family: $fontset1;
+    text-align: center;
+    color: $color6;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: $fontset1;
+    text-align: left;
+    color: $color1;
+    font-weight: 800;
+    font-size: 35px;
+    margin-top: 10%;
+}
+
+.h3ondertitel {
+    font-size: 18px;
+    color: $color3;
+    margin-right: 100px;
+}
+
+/* Homepagina*/
+
+.contact-section-home {
+    background-color: $color2;
+
+    .h1ondertitel {
+        color: $color6;
+        font-family: $fontset2;
+        font-size: 32px;
+
+        @media (max-width: $breekpunt1) {
+            font-size: 22px;
+        }
+        @media (max-width: $breekpunt2) {
+            font-size: 22px;
+        }
+        @media (max-width: $breekpunt3) {}
+    }
+
+    .imgheader {
+        margin-top: 20%;
+
+        @media (max-width: $breekpunt1) {
+            margin-top: 0%;
+            padding-bottom: 5%;
+        }
+        @media (max-width: $breekpunt2) {
+            margin-top: 0%;
+        }
+    }
+
+    .donkerblauw {
+        background-color: $color1;
+        border: none;
+        color: $color5;
+        border-radius: 40px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-bottom: 80px;
+        margin-top: 20px;
+    }
+
+}
+
+/* Cards homepagina */
+
+.homepagina {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+
+
+    .card {
+        background-color: $color5;
+        margin-top: 60px;
+        margin-bottom: 40px;
+
+
+        .card-img-top {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+        }
+
+        .card-text {
+            font-family: $fontset2;
+            text-align: center;
+            color: $color6;
+            margin-top: 40px;
+            font-size: 18px;
+
+        }
+
+        .btn-primary {
+            background-color: $color2;
+            color: $color6;
+            border-radius: 40px;
+            padding: 15px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border: none;
+            display: block;
+            margin-top: 40px;
+            margin-bottom: 20px;
+
+        }
+
+    }
+}
+
+/* Over pagina*/
+
+.over {
+    margin-top: -20px;
+}
+
+.card-body {
+
+    .hoofdkolom {
+        margin-top: 5rem;
+
+        .kleurvlak {
+            background-color: $color1;
+            width: 1%;
+            height: 100px;
+            border-radius: 20px;
+
+        }
+
+        .tekstvlak {
+            width: 80%;
+            left: 30px;
+            top: -135px;
+            position: relative;
+            z-index: 2;
+            color: black;
+
+            .betekenis {
+                font-family: $fontset1;
+                text-align: left;
+                color: $color1;
+                font-weight: 800;
+                font-size: 35px;
+
+                &:first-of-type {
+                    margin-top: 2rem;
+                }
+            }
+
+            .uitleg {
+                font-size: 18px;
+                color: $color6;
+            }
+
+            .quote {
+                font-family: $fontset2;
+                text-align: left;
+                color: $color1;
+                font-weight: 400;
+                font-size: 25px;
+
+            }
+
+            .btn-primary-doneer {
+                background-color: $color1;
+                color: $color5;
+                border-radius: 40px;
+                padding: 10px;
+                padding-left: 80px;
+                padding-right: 80px;
+                margin-top: 20px;
+
+            }
+        }
+
+    }
+}
+
+
+
+/* Zelfhulpgroep 
+
+.flip-card {
+    background-color: none;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 29px;
+    backface-visibility: hidden;
+
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 1px 2px 0 $color1;
+
+    }
+}
+
+.flip-card:hover {
+
+    .flip-card-inner {
+        transform: rotateY(180deg);
+
+    }
+
+    .flip-card-front,
+        {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    .flip-card-back {
+        background-color: $color2 !important;
+        color: white;
+        transform: rotateY(180deg);
+        z-index: 1;
+        padding: 20px;
+
+        }
+    }
+*/
+
+/* horizontal flip*/
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+
+}
+
+.pictures {
+    margin-top: 20px;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: $color2;
+    color: $color5;
+    transform: rotateY(180deg);
+
+    .test {
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .contactme {
+        background-color: $color1;
+        padding-top: 20px;
+        padding-bottom: 2px;
+
+        .a {
+            color: $color5 !important;
+        }
+    }
+}
+
+.carda {
+    color: white;
+}
+
+/*Aanpassingen — zelfhulpgroep*/
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+}
+
+/* zelfhulpgroep forms 
+
+*/
+
+.contact-formular {
+    h3 {
+        padding-top: 3rem;
+    }
+
+    border: none;
+
+    .text {
+        font-size: 16px;
+        width: 100%;
+        padding: 15px;
+        border: 2px solid;
+        margin: 10px 0px;
+        color: $color4;
+    }
+
+    .submit {
+        background-color: $color5;
+        color: $color5;
+        cursor: pointer;
+        border: none;
+        border-radius: 0px;
+
+    }
+
+    .btnContact {
+        background-color: $color5;
+    }
+}
+
+
+
+
+/*Aanpassingen — contact pagina*/
+
+.contact-section {
+    background-color: $color2;
+}
+
+.contact {
+    background-color: $color1;
+    padding: 3% 0% 3% 3%;
+    margin-top: 5%;
+
+
+    .witdik {
+        color: $color5;
+        font-size: 34px;
+        font-family: $fontset1;
+        font-weight: 800;
+    }
+}
+
+.white {
+    color: $color5;
+}
+
+.vakrechts {
+    background-color: $color5;
+    margin-top: 5%;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.form-control {
+    background-color: $color5 !important;
+    border: $color4 1px solid !important;
+    border-radius: 0px;
+}
+
+
+a:hover {
+    text-decoration: none;
+    color: $color4;
+}
+
+.btn-contact {
+    background-color: $color1;
+    border-radius: 30px;
+    padding: 10px;
+    color: $color5;
+
+}
+
+/* donation forms */
+
+.donatie {
+    .pdonatietitel {
+        font-size: 28px;
+        color: $color1;
+        margin-right: 100px;
+        font-weight: 700;
+    }
+
+    .pdonatie {
+        font-size: 18px;
+        color: $color3;
+        margin-right: 100px;
+    }
+
+}
+
+.donation-box {
+    width: 390px;
+    z-index: -10;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20%;
+
+}
+
+.btndonation {
+    background-color: $color1;
+    width: 30%;
+    color: $color5;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 18px;
+    bottom: 0px;
+    position: absolute;
+    font-weight: 800;
+}
+
+.share-button {
+    background-color: $color1;
+    width: 100%;
+    color: $color5;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 18px;
+    bottom: 0px;
+    position: absolute;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.color {
+    background-color: rgb(124, 97, 60);
+}
+
+/*
+.beardonate{
+    position: relative;
+}
+.above{
+    position:absolute;
+    bottom: 50%;
+    left: 50%;
+}*/
+.donation-box .amount {
+    display: block;
+    position: relative;
+    margin: 10%;
+}
+
+.donation-box .amount .button {
+    width: 20%;
+    background-color: $color1;
+    margin-bottom: 10px;
+    text-align: center;
+    color: $color5;
+    padding: 15px 0px 15px 0px;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.donation-box .amount .button large {
+    width: 60%;
+}
+
+.donation-box .amount .button:hover {
+    background-color: $color3;
+}
+
+.donation-box .amount .button.selected {
+    background-color: $color3;
+}
+
+.donation-box .amount .button input {
+    font-size: 20px;
+    font-weight: 500;
+    border: $color5;
+    background-color: transparent;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    border-bottom: 2px dashed $color5;
+}
+
+.set-amount {
+    max-width: 50%;
+}
+
+.checkbox {
+    position: absolute;
+    top: 242px;
+    left: 13px;
+}
+
+.checkbox label {
+    position: relative;
+    top: -8px;
+    font-size: 13px;
+    color: $color3;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    background-color: $color5;
+    border: 1px solid $color3;
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    outline: none;
+
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+
+
+.checkbox:checked {
+    border: 1px solid none;
+    color: $color5;
+}
+
+.checkbox:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: $color5;
+}
+
+
+/*Aanpassingen — doneer pagina */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: $color2;
+}
+
+.titel {
+    font-family: $fontset2;
+    color: $color1;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: -20px;
+}
+
+.achtergrondkl {
+    background-image: url('../images/doneer1.png');
+    float: right;
+}
+
+
+.btn-doneer {
+    background-color: $color1 !important;
+    color: $color5;
+    border: none;
+    padding: 5%;
+    border-radius: 20px;
+    margin-top: 7%;
+    margin-left: 7%;
+}
+
+.btn-doneerform {
+    background-color: $color1 !important;
+    color: $color5;
+    border: none;
+    padding: 5%;
+    border-radius: 20px;
+    margin-top: 7%;
+    margin-left: 2%;
+    width: 90%;
+
+}
+
+.form-control {
+    background-color: $color5;
+    border: none;
+    margin: 2%;
+}
+
+.form-check-label {
+    color: $color5;
+    font-size: 12px;
+}
+
+.pad {
+    padding-top: 30px;
+}
+
+.cijfer {
+    color: $color1;
+    font-size: 60px;
+    font-weight: 800;
+}
+
+#stripe {
+    border-left: $color1 5px solid;
+    width: 0;
+    height: 4em;
+
+}
+
+.spac {
+    margin-top: 10%;
+
+}
+
+
+/* Footer */
+
+
+footer.foeter {
+    padding: 0 20px;
+    bottom: 0px;
+    width: 100%;
+    height: 80px;
+    background-color: $color1;
+    display: flex;
+
+    .footer_container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color5;
+        font-family: $fontset2;
+
+
+        a {
+            i {
+                font-size: 1em;
+                line-height: 60px;
+                color: $color5;
+                margin: 0.5rem;
+                
+            }
+
+        }
+
+        .linkerkant {
+            line-height: 60px;
+            color: $color5;
+        }
+    }
+}

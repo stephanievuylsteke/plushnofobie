@@ -1,5 +1,64 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*Titels/Paragrafen*/
+p {
+  color: black;
+}
+
+.tussentitel {
+  font-family: "Open Sans", sans-serif;
+  color: #5B5A5C;
+  font-size: 32px;
+}
+
+h1 {
+  color: #646BEB;
+  font-size: 90px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 800;
+  margin-top: 10%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 650px) {
+  h1 {
+    font-size: 65px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+.h3ondertitel {
+  font-size: 18px;
+  color: #5B5A5C;
+}
+
+@media (max-width: 450px) {
+  .h3ondertitel {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
 /* Navigatiebar*/
 .nav {
   background-color: #6BDAED !important;
@@ -40,67 +99,7 @@
   border-radius: 30px;
 }
 
-/*Titels/Paragrafen*/
-p {
-  color: black;
-}
-
-.tussentitel {
-  font-family: "Open Sans", sans-serif;
-  color: #5B5A5C;
-  font-size: 32px;
-}
-
-h1 {
-  color: #646BEB;
-  font-size: 90px;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 800;
-  margin-top: 10%;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 450px) {
-  h1 {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 650px) {
-  h1 {
-    font-size: 60px;
-  }
-}
-
-@media (max-width: 1200px) {
-  h1 {
-    font-size: 60px;
-  }
-}
-
-h2 {
-  font-family: "Work Sans", sans-serif;
-  text-align: center;
-  color: black;
-  font-weight: 400;
-}
-
-h3 {
-  font-family: "Work Sans", sans-serif;
-  text-align: left;
-  color: #646BEB;
-  font-weight: 800;
-  font-size: 35px;
-  margin-top: 10%;
-}
-
-.h3ondertitel {
-  font-size: 18px;
-  color: #5B5A5C;
-  margin-right: 100px;
-}
-
-/* Homepagina*/
+/* HOMEPAGINA*/
 .contact-section-home {
   background-color: #6BDAED;
 }
@@ -111,15 +110,10 @@ h3 {
   font-size: 32px;
 }
 
-@media (max-width: 450px) {
-  .contact-section-home .h1ondertitel {
-    font-size: 22px;
-  }
-}
-
 @media (max-width: 650px) {
   .contact-section-home .h1ondertitel {
-    font-size: 22px;
+    font-size: 20px;
+    text-align: center;
   }
 }
 
@@ -145,21 +139,24 @@ h3 {
   border: none;
   color: white;
   border-radius: 40px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding: 15px 100px;
   margin-bottom: 80px;
   margin-top: 20px;
 }
 
-/* Cards homepagina */
-.homepagina {
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
+@media (max-width: 450px) {
+  .contact-section-home .donkerblauw {
+    margin: 0 auto;
+  }
 }
 
+@media (max-width: 650px) {
+  .contact-section-home .donkerblauw {
+    margin: 0 auto;
+  }
+}
+
+/* Cards */
 .homepagina .card {
   background-color: white;
   margin-top: 60px;
@@ -168,8 +165,7 @@ h3 {
 
 .homepagina .card .card-img-top {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 70%;
 }
 
@@ -181,22 +177,57 @@ h3 {
   font-size: 18px;
 }
 
+@media (max-width: 1200px) {
+  .homepagina .card .card-text {
+    font-size: 18px;
+    color: black;
+  }
+}
+
 .homepagina .card .btn-primary {
   background-color: #6BDAED;
   color: black;
   border-radius: 40px;
   padding: 15px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 40px 20px 20px 20px;
   border: none;
   display: block;
-  margin-top: 40px;
-  margin-bottom: 20px;
 }
 
-/* Over pagina*/
+.homepagina .card .card-title {
+  font-size: 35px;
+  color: black;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+  color: black;
+  font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  .homepagina .card .card-title {
+    font-size: 20px;
+    color: black;
+  }
+}
+
+@media (max-width: 1200px) {
+  .homepagina .card .card-title {
+    font-size: 30px;
+    color: black;
+  }
+}
+
+/* OVER pagina*/
 .over {
   margin-top: -20px;
+}
+
+@media (max-width: 1200px) {
+  .card-body {
+    margin-top: 0px;
+    padding: 0px;
+    text-align: center;
+  }
 }
 
 .card-body .hoofdkolom {
@@ -210,6 +241,12 @@ h3 {
   border-radius: 20px;
 }
 
+@media (max-width: 1200px) {
+  .card-body .hoofdkolom .kleurvlak {
+    display: none;
+  }
+}
+
 .card-body .hoofdkolom .tekstvlak {
   width: 80%;
   left: 30px;
@@ -217,6 +254,20 @@ h3 {
   position: relative;
   z-index: 2;
   color: black;
+}
+
+.card-body .hoofdkolom .tekstvlak .card-titel {
+  font-size: 35px;
+  color: black;
+  font-family: "Work Sans", sans-serif;
+  color: #646BEB;
+  font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  .card-body .hoofdkolom .tekstvlak .card-titel {
+    text-align: center;
+  }
 }
 
 .card-body .hoofdkolom .tekstvlak .betekenis {
@@ -231,9 +282,22 @@ h3 {
   margin-top: 2rem;
 }
 
+@media (max-width: 1200px) {
+  .card-body .hoofdkolom .tekstvlak .betekenis:first-of-type {
+    margin-top: 7rem;
+    text-align: center;
+  }
+}
+
 .card-body .hoofdkolom .tekstvlak .uitleg {
   font-size: 18px;
   color: black;
+}
+
+@media (max-width: 1200px) {
+  .card-body .hoofdkolom .tekstvlak .uitleg {
+    font-size: 15px;
+  }
 }
 
 .card-body .hoofdkolom .tekstvlak .quote {
@@ -244,71 +308,29 @@ h3 {
   font-size: 25px;
 }
 
+@media (max-width: 1200px) {
+  .card-body .hoofdkolom .tekstvlak .quote {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
 .card-body .hoofdkolom .tekstvlak .btn-primary-doneer {
   background-color: #646BEB;
   color: white;
   border-radius: 40px;
-  padding: 10px;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding: 10px 80px;
   margin-top: 20px;
 }
 
-/* Zelfhulpgroep 
-
-.flip-card {
-    background-color: none;
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
-    margin: 29px;
-    backface-visibility: hidden;
-
-
-    .flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        box-shadow: 0 1px 2px 0 $color1;
-
-    }
-}
-
-.flip-card:hover {
-
-    .flip-card-inner {
-        transform: rotateY(180deg);
-
-    }
-
-    .flip-card-front,
-        {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-    }
-
-    .flip-card-back {
-        background-color: $color2 !important;
-        color: white;
-        transform: rotateY(180deg);
-        z-index: 1;
-        padding: 20px;
-
-        }
-    }
-*/
-/* horizontal flip*/
+/* ZELFHULPGROEP*/
+/* flipcards*/
 .flip-card:hover .flip-card-inner {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
+/* position the front and back side */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -319,10 +341,10 @@ h3 {
 }
 
 .pictures {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
-/* Style the back side */
+/* style the back side */
 .flip-card-back {
   background-color: #6BDAED;
   color: white;
@@ -331,9 +353,9 @@ h3 {
 }
 
 .flip-card-back .test {
-  margin-top: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .flip-card-back .contactme {
@@ -350,16 +372,14 @@ h3 {
   color: white;
 }
 
-/*Aanpassingen — zelfhulpgroep*/
 .flip-card {
   background-color: transparent;
-  width: 300px;
   height: 300px;
 }
 
 .flip-card .flip-card-inner {
   position: relative;
-  width: 100%;
+  width: 300px;
   height: 100%;
   text-align: center;
   -webkit-transition: -webkit-transform 0.8s;
@@ -370,39 +390,85 @@ h3 {
           transform-style: preserve-3d;
 }
 
-/* zelfhulpgroep forms 
-
-*/
-.contact-formular {
-  border: none;
+@media (max-width: 450px) {
+  .flip-card {
+    margin-bottom: 5%;
+  }
 }
 
+@media (max-width: 1200px) {
+  .flip-card {
+    margin-bottom: 5%;
+  }
+}
+
+/* zelfhulpgroep form */
 .contact-formular h3 {
-  padding-top: 3rem;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-family: "Work Sans", sans-serif;
+  text-align: left;
+  color: #646BEB;
+  font-weight: 800;
+  font-size: 35px;
+  margin-top: 80px;
 }
 
-.contact-formular .text {
-  font-size: 16px;
+@media (max-width: 1200px) {
+  .contact-formular h3 {
+    text-align: center;
+  }
+}
+
+.contact-formular .form-group {
+  border: none;
+  padding-bottom: 5px;
+}
+
+.contact-formular .form-group .text {
+  font-family: "Open Sans", sans-serif;
   width: 100%;
   padding: 15px;
   border: 2px solid;
-  margin: 10px 0px;
   color: #DCDCDC;
 }
 
-.contact-formular .submit {
-  background-color: white;
-  color: white;
-  cursor: pointer;
+@media (max-width: 1200px) {
+  .contact-formular .form-group {
+    text-align: center;
+  }
+}
+
+.contact-formular .btnhelp {
+  background-color: #646BEB;
   border: none;
-  border-radius: 0px;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-.contact-formular .btnContact {
+.imagediv {
+  float: right;
+}
+
+.imagediv .showonhover {
   background-color: white;
+  border: 1px solid #DCDCDC;
+  border-radius: 30px;
+  padding: 10px;
+  color: color6;
+  width: 100%;
+  display: block;
+  text-align: center;
+  cursor: pointer;
 }
 
-/*Aanpassingen — contact pagina*/
+/* CONTACT pagina*/
 .contact-section {
   background-color: #6BDAED;
 }
@@ -410,7 +476,14 @@ h3 {
 .contact {
   background-color: #646BEB;
   padding: 3% 0% 3% 3%;
-  margin-top: 5%;
+  margin-top: 10%;
+  margin-bottom: 21%;
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    text-align: center;
+  }
 }
 
 .contact .witdik {
@@ -426,9 +499,19 @@ h3 {
 
 .vakrechts {
   background-color: white;
-  margin-top: 5%;
+  margin-top: 10%;
   width: 100%;
-  padding: 10px;
+  padding: 40px;
+  padding-right: 60px;
+  margin-bottom: 21%;
+}
+
+@media (max-width: 1200px) {
+  .vakrechts {
+    text-align: center;
+    margin-bottom: 0%;
+    margin-top: 0%;
+  }
 }
 
 .form-control {
@@ -437,182 +520,27 @@ h3 {
   border-radius: 0px;
 }
 
-a:hover {
-  text-decoration: none;
-  color: #DCDCDC;
-}
-
-.btn-contact {
+.btn-verzend {
   background-color: #646BEB;
   border-radius: 30px;
   padding: 10px;
+  margin-left: 8px;
   color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* donation forms */
-.donatie .pdonatietitel {
-  font-size: 28px;
-  color: #646BEB;
-  margin-right: 100px;
-  font-weight: 700;
+@media (max-width: 1200px) {
+  .donatie {
+    text-align: center;
+  }
 }
 
-.donatie .pdonatie {
-  font-size: 18px;
-  color: #5B5A5C;
-  margin-right: 100px;
-}
-
-.donation-box {
-  width: 390px;
-  z-index: -10;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -20%;
-}
-
-.btndonation {
-  background-color: #646BEB;
-  width: 30%;
-  color: white;
-  text-align: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  font-size: 18px;
-  bottom: 0px;
-  position: absolute;
-  font-weight: 800;
-}
-
-.share-button {
-  background-color: #646BEB;
-  width: 100%;
-  color: white;
-  text-align: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  font-size: 18px;
-  bottom: 0px;
-  position: absolute;
-  cursor: pointer;
-  font-weight: 800;
-}
-
-.color {
-  background-color: #7c613c;
-}
-
-/*
-.beardonate{
-    position: relative;
-}
-.above{
-    position:absolute;
-    bottom: 50%;
-    left: 50%;
-}*/
-.donation-box .amount {
-  display: block;
-  position: relative;
-  margin: 10%;
-}
-
-.donation-box .amount .button {
-  width: 20%;
-  background-color: #646BEB;
-  margin-bottom: 10px;
-  text-align: center;
-  color: white;
-  padding: 15px 0px 15px 0px;
-  border-radius: 4px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.donation-box .amount .button large {
-  width: 60%;
-}
-
-.donation-box .amount .button:hover {
-  background-color: #5B5A5C;
-}
-
-.donation-box .amount .button.selected {
-  background-color: #5B5A5C;
-}
-
-.donation-box .amount .button input {
-  font-size: 20px;
-  font-weight: 500;
-  border: white;
-  background-color: transparent;
-  color: white;
-  font-family: Montserrat, sans-serif;
-  font-size: 20px;
-  font-stretch: normal;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 500;
-  border-bottom: 2px dashed white;
-}
-
-.set-amount {
-  max-width: 50%;
-}
-
-.checkbox {
-  position: absolute;
-  top: 242px;
-  left: 13px;
-}
-
-.checkbox label {
-  position: relative;
-  top: -8px;
-  font-size: 13px;
-  color: #5B5A5C;
-}
-
-.checkbox {
-  -webkit-appearance: none;
-  background-color: white;
-  border: 1px solid #5B5A5C;
-  padding: 9px;
-  border-radius: 3px;
-  display: inline-block;
-  position: relative;
-  outline: none;
-  -webkit-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-
-.checkbox:checked {
-  border: 1px solid none;
-  color: white;
-}
-
-.checkbox:checked:after {
-  content: '\2714';
-  font-size: 14px;
-  position: absolute;
-  top: 0px;
-  left: 3px;
-  color: white;
-}
-
-/*Aanpassingen — doneer pagina */
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: #6BDAED;
-}
-
-.titel {
+.donatie .titel {
   font-family: "Open Sans", sans-serif;
   color: #646BEB;
   font-weight: 700;
@@ -620,36 +548,53 @@ a:hover {
   margin-top: -20px;
 }
 
+.donatie .pdonatie {
+  font-size: 18px;
+  color: #5B5A5C;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
 .achtergrondkl {
-  background-image: url("../images/doneer1.png");
-  float: right;
+  background-color: #B37D62;
+  text-align: center;
+  margin-top: 80px;
 }
 
 .btn-doneer {
-  background-color: #646BEB !important;
-  color: white;
+  background-color: #F0CCA0 !important;
+  color: black;
   border: none;
   padding: 5%;
   border-radius: 20px;
   margin-top: 7%;
+  margin-bottom: 7%;
   margin-left: 7%;
 }
 
 .btn-doneerform {
-  background-color: #646BEB !important;
-  color: white;
+  background-color: #F0CCA0 !important;
+  color: black;
   border: none;
   padding: 5%;
   border-radius: 20px;
   margin-top: 7%;
-  margin-left: 2%;
+  margin-bottom: 7%;
+  margin-left: 4%;
+  margin-right: 4%;
   width: 90%;
 }
 
 .form-control {
   background-color: white;
   border: none;
-  margin: 2%;
+  margin-bottom: 7%;
 }
 
 .form-check-label {
@@ -667,14 +612,8 @@ a:hover {
   font-weight: 800;
 }
 
-#stripe {
-  border-left: #646BEB 5px solid;
-  width: 0;
-  height: 4em;
-}
-
 .spac {
-  margin-top: 10%;
+  margin-top: 40px;
 }
 
 /* Footer */

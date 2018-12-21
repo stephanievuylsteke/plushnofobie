@@ -6,9 +6,9 @@ $color3: #5B5A5C;
 $color4: #DCDCDC;
 $color5: white;
 $color6: black;
+$color7: #B37D62;
+$color8: #F0CCA0;
 
-$alpha1: 0.5;
-$alpha2: 1;
 
 $bg-gradient: linear-gradient(-45deg, $color1, $color2);
 
@@ -21,6 +21,58 @@ $breekpunt1: 450px;
 $breekpunt2: 650px;
 $breekpunt3: 1200px;
 
+* {
+    padding: 0;
+    margin: 0;
+    font-family: $fontset2;
+    box-sizing: border-box;
+}
+
+/*Titels/Paragrafen*/
+
+p {
+    color: $color6;
+}
+
+.tussentitel {
+    font-family: $fontset2;
+    color: $color3;
+    font-size: 32px;
+}
+
+h1 {
+    color: $color1;
+    font-size: 90px;
+    font-family: $fontset1;
+    font-weight: 800;
+    margin-top: 10%;
+    margin-bottom: 20px;
+
+
+    @media (max-width: $breekpunt1) {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    @media (max-width: $breekpunt2) {
+        font-size: 65px;
+        text-align: center;
+    }
+
+    @media (max-width: $breekpunt3) {
+        font-size: 50px;
+    }
+}
+
+.h3ondertitel {
+    font-size: 18px;
+    color: $color3;
+
+    @media (max-width: $breekpunt1) {
+        font-size: 15px;
+        text-align: center;
+    }
+}
 
 /* Navigatiebar*/
 .nav {
@@ -52,6 +104,7 @@ $breekpunt3: 1200px;
         &:active {
             border: 1px $color1 !important;
             border-radius: 30px;
+
         }
     }
 
@@ -61,64 +114,11 @@ $breekpunt3: 1200px;
         padding: 10px;
         border: 1px;
         border-radius: 30px;
+
     }
 }
 
-/*Titels/Paragrafen*/
-
-p {
-    color: $color6;
-
-}
-
-.tussentitel {
-    font-family: $fontset2;
-    color: $color3;
-    font-size: 32px;
-}
-
-h1 {
-    color: $color1;
-    font-size: 90px;
-    font-family: $fontset1;
-    font-weight: 800;
-    margin-top: 10%;
-    margin-bottom: 20px;
-
-    @media (max-width: $breekpunt1) {
-        font-size: 40px;
-    }
-    @media (max-width: $breekpunt2) {
-        font-size: 60px;
-    }
-    @media (max-width: $breekpunt3) {
-        font-size: 60px;
-    }
-}
-
-h2 {
-    font-family: $fontset1;
-    text-align: center;
-    color: $color6;
-    font-weight: 400;
-}
-
-h3 {
-    font-family: $fontset1;
-    text-align: left;
-    color: $color1;
-    font-weight: 800;
-    font-size: 35px;
-    margin-top: 10%;
-}
-
-.h3ondertitel {
-    font-size: 18px;
-    color: $color3;
-    margin-right: 100px;
-}
-
-/* Homepagina*/
+/* HOMEPAGINA*/
 
 .contact-section-home {
     background-color: $color2;
@@ -128,13 +128,10 @@ h3 {
         font-family: $fontset2;
         font-size: 32px;
 
-        @media (max-width: $breekpunt1) {
-            font-size: 22px;
-        }
         @media (max-width: $breekpunt2) {
-            font-size: 22px;
+            font-size: 20px;
+            text-align: center;
         }
-        @media (max-width: $breekpunt3) {}
     }
 
     .imgheader {
@@ -144,6 +141,7 @@ h3 {
             margin-top: 0%;
             padding-bottom: 5%;
         }
+
         @media (max-width: $breekpunt2) {
             margin-top: 0%;
         }
@@ -154,34 +152,30 @@ h3 {
         border: none;
         color: $color5;
         border-radius: 40px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        padding-left: 100px;
-        padding-right: 100px;
+        padding: 15px 100px;
         margin-bottom: 80px;
         margin-top: 20px;
-    }
 
+        @media (max-width: $breekpunt1) {
+            margin: 0 auto;
+        }
+
+        @media (max-width: $breekpunt2) {
+            margin: 0 auto;
+        }
+    }
 }
 
-/* Cards homepagina */
-
+/* Cards */
 .homepagina {
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-
-
     .card {
         background-color: $color5;
         margin-top: 60px;
         margin-bottom: 40px;
 
-
         .card-img-top {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
             width: 70%;
         }
 
@@ -192,6 +186,10 @@ h3 {
             margin-top: 40px;
             font-size: 18px;
 
+            @media (max-width: $breekpunt3) {
+                font-size: 18px;
+                color: $color6;
+            }
         }
 
         .btn-primary {
@@ -199,25 +197,44 @@ h3 {
             color: $color6;
             border-radius: 40px;
             padding: 15px;
-            margin-left: 20px;
-            margin-right: 20px;
+            margin: 40px 20px 20px 20px;
             border: none;
             display: block;
-            margin-top: 40px;
-            margin-bottom: 20px;
 
         }
 
+        .card-title {
+            font-size: 35px;
+            color: $color6;
+            font-family: "Work Sans", sans-serif;
+            text-align: center;
+            color: $color6;
+            font-weight: 400;
+
+            @media (max-width: $breekpunt2) {
+                font-size: 20px;
+                color: $color6;
+            }
+
+            @media (max-width: $breekpunt3) {
+                font-size: 30px;
+                color: $color6;
+            }
+        }
     }
 }
 
-/* Over pagina*/
-
+/* OVER pagina*/
 .over {
     margin-top: -20px;
 }
 
 .card-body {
+    @media (max-width: $breekpunt3) {
+        margin-top: 0px;
+        padding: 0px;
+        text-align: center;
+    }
 
     .hoofdkolom {
         margin-top: 5rem;
@@ -228,6 +245,9 @@ h3 {
             height: 100px;
             border-radius: 20px;
 
+            @media (max-width: $breekpunt3) {
+                display: none;
+            }
         }
 
         .tekstvlak {
@@ -238,6 +258,18 @@ h3 {
             z-index: 2;
             color: black;
 
+            .card-titel {
+                font-size: 35px;
+                color: $color6;
+                font-family: "Work Sans", sans-serif;
+                color: $color1;
+                font-weight: 400;
+
+                @media (max-width: $breekpunt3) {
+                    text-align: center;
+                }
+            }
+
             .betekenis {
                 font-family: $fontset1;
                 text-align: left;
@@ -247,12 +279,22 @@ h3 {
 
                 &:first-of-type {
                     margin-top: 2rem;
+
+                    @media (max-width: $breekpunt3) {
+                        margin-top: 7rem;
+                        text-align: center;
+                    }
                 }
             }
 
             .uitleg {
                 font-size: 18px;
                 color: $color6;
+
+                @media (max-width: $breekpunt3) {
+                    font-size: 15px;
+                }
+
             }
 
             .quote {
@@ -262,104 +304,58 @@ h3 {
                 font-weight: 400;
                 font-size: 25px;
 
+                @media (max-width: $breekpunt3) {
+                    font-size: 18px;
+                    text-align: center;
+
+                }
+
             }
 
             .btn-primary-doneer {
                 background-color: $color1;
                 color: $color5;
                 border-radius: 40px;
-                padding: 10px;
-                padding-left: 80px;
-                padding-right: 80px;
+                padding: 10px 80px;
                 margin-top: 20px;
 
             }
         }
 
     }
+
 }
 
+/* ZELFHULPGROEP*/
 
-
-/* Zelfhulpgroep 
-
-.flip-card {
-    background-color: none;
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
-    margin: 29px;
-    backface-visibility: hidden;
-
-
-    .flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        box-shadow: 0 1px 2px 0 $color1;
-
-    }
-}
-
-.flip-card:hover {
-
-    .flip-card-inner {
-        transform: rotateY(180deg);
-
-    }
-
-    .flip-card-front,
-        {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-    }
-
-    .flip-card-back {
-        background-color: $color2 !important;
-        color: white;
-        transform: rotateY(180deg);
-        z-index: 1;
-        padding: 20px;
-
-        }
-    }
-*/
-
-/* horizontal flip*/
+/* flipcards*/
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-
-/* Position the front and back side */
+/* position the front and back side */
 .flip-card-front,
 .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-
 }
 
 .pictures {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
-/* Style the back side */
+/* style the back side */
 .flip-card-back {
     background-color: $color2;
     color: $color5;
     transform: rotateY(180deg);
 
     .test {
-        margin-top: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .contactme {
@@ -374,64 +370,103 @@ h3 {
 }
 
 .carda {
-    color: white;
+    color: $color5;
 }
 
-/*Aanpassingen — zelfhulpgroep*/
 .flip-card {
     background-color: transparent;
-    width: 300px;
     height: 300px;
 
     .flip-card-inner {
         position: relative;
-        width: 100%;
+        width: 300px;
         height: 100%;
         text-align: center;
         transition: transform 0.8s;
         transform-style: preserve-3d;
     }
 
+    @media (max-width: $breekpunt1) {
+        margin-bottom: 5%;
+    }
+
+    @media (max-width: $breekpunt3) {
+        margin-bottom: 5%;
+    }
 }
 
-/* zelfhulpgroep forms 
 
-*/
+
+
+
+/* zelfhulpgroep form */
+
 
 .contact-formular {
     h3 {
-        padding-top: 3rem;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-family: $fontset1;
+        text-align: left;
+        color: $color1;
+        font-weight: 800;
+        font-size: 35px;
+        margin-top: 80px;
+
+        @media (max-width: $breekpunt3) {
+            text-align: center;
+        }
     }
 
-    border: none;
-
-    .text {
-        font-size: 16px;
-        width: 100%;
-        padding: 15px;
-        border: 2px solid;
-        margin: 10px 0px;
-        color: $color4;
-    }
-
-    .submit {
-        background-color: $color5;
-        color: $color5;
-        cursor: pointer;
+    .form-group {
         border: none;
-        border-radius: 0px;
+        padding-bottom: 5px;
 
+        .text {
+            font-family: $fontset2;
+            width: 100%;
+            padding: 15px;
+            border: 2px solid;
+            color: $color4;
+        }
+
+        @media (max-width: $breekpunt3) {
+            text-align: center;
+        }
     }
 
-    .btnContact {
-        background-color: $color5;
+
+    .btnhelp {
+        background-color: $color1;
+        border: none;
+        color: $color5;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 30px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 }
 
+.imagediv {
+    float: right;
+}
 
+.imagediv .showonhover {
+    background-color: $color5;
+    border: 1px solid $color4;
+    border-radius: 30px;
+    padding: 10px;
+    color: color6;
+    width: 100%;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
 
-
-/*Aanpassingen — contact pagina*/
+/* CONTACT pagina*/
 
 .contact-section {
     background-color: $color2;
@@ -440,7 +475,14 @@ h3 {
 .contact {
     background-color: $color1;
     padding: 3% 0% 3% 3%;
-    margin-top: 5%;
+    margin-top: 10%;
+    margin-bottom: 21%;
+
+    @media (max-width: $breekpunt3) {
+        text-align: center;
+
+    }
+
 
 
     .witdik {
@@ -457,9 +499,18 @@ h3 {
 
 .vakrechts {
     background-color: $color5;
-    margin-top: 5%;
+    margin-top: 10%;
     width: 100%;
-    padding: 10px;
+    padding: 40px;
+    padding-right: 60px;
+    margin-bottom: 21%;
+
+
+    @media (max-width: $breekpunt3) {
+        text-align: center;
+        margin-bottom: 0%;
+        margin-top: 0%;
+    }
 
 }
 
@@ -470,224 +521,77 @@ h3 {
 }
 
 
-a:hover {
-    text-decoration: none;
-    color: $color4;
-}
-
-.btn-contact {
+.btn-verzend {
     background-color: $color1;
     border-radius: 30px;
     padding: 10px;
+    margin-left: 8px;
     color: $color5;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
 
 }
 
 /* donation forms */
 
 .donatie {
-    .pdonatietitel {
-        font-size: 28px;
+
+    @media (max-width: $breekpunt3) {
+        text-align: center;
+    }
+
+    .titel {
+        font-family: $fontset2;
         color: $color1;
-        margin-right: 100px;
         font-weight: 700;
+        font-size: 20px;
+        margin-top: -20px;
     }
 
     .pdonatie {
         font-size: 18px;
         color: $color3;
-        margin-right: 100px;
     }
 
 }
 
-.donation-box {
-    width: 390px;
-    z-index: -10;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -20%;
-
-}
-
-.btndonation {
-    background-color: $color1;
-    width: 30%;
-    color: $color5;
-    text-align: center;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font-size: 18px;
-    bottom: 0px;
-    position: absolute;
-    font-weight: 800;
-}
-
-.share-button {
-    background-color: $color1;
-    width: 100%;
-    color: $color5;
-    text-align: center;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font-size: 18px;
-    bottom: 0px;
-    position: absolute;
-    cursor: pointer;
-    font-weight: 800;
-}
-
-.color {
-    background-color: rgb(124, 97, 60);
-}
-
-/*
-.beardonate{
-    position: relative;
-}
-.above{
-    position:absolute;
-    bottom: 50%;
-    left: 50%;
-}*/
-.donation-box .amount {
-    display: block;
-    position: relative;
-    margin: 10%;
-}
-
-.donation-box .amount .button {
-    width: 20%;
-    background-color: $color1;
-    margin-bottom: 10px;
-    text-align: center;
-    color: $color5;
-    padding: 15px 0px 15px 0px;
-    border-radius: 4px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.donation-box .amount .button large {
-    width: 60%;
-}
-
-.donation-box .amount .button:hover {
-    background-color: $color3;
-}
-
-.donation-box .amount .button.selected {
-    background-color: $color3;
-}
-
-.donation-box .amount .button input {
-    font-size: 20px;
-    font-weight: 500;
-    border: $color5;
-    background-color: transparent;
-    color: white;
-    font-family: Montserrat, sans-serif;
-    font-size: 20px;
-    font-stretch: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 500;
-    border-bottom: 2px dashed $color5;
-}
-
-.set-amount {
-    max-width: 50%;
-}
-
-.checkbox {
-    position: absolute;
-    top: 242px;
-    left: 13px;
-}
-
-.checkbox label {
-    position: relative;
-    top: -8px;
-    font-size: 13px;
-    color: $color3;
-}
-
-.checkbox {
-    -webkit-appearance: none;
-    background-color: $color5;
-    border: 1px solid $color3;
-    padding: 9px;
-    border-radius: 3px;
-    display: inline-block;
-    position: relative;
-    outline: none;
-
-    -webkit-transition: all 0.15s ease-out;
-    -moz-transition: all 0.15s ease-out;
-    -o-transition: all 0.15s ease-out;
-    transition: all 0.15s ease-out;
-}
-
-
-.checkbox:checked {
-    border: 1px solid none;
-    color: $color5;
-}
-
-.checkbox:checked:after {
-    content: '\2714';
-    font-size: 14px;
-    position: absolute;
-    top: 0px;
-    left: 3px;
-    color: $color5;
-}
-
-
-/*Aanpassingen — doneer pagina */
 a {
     text-decoration: none;
 }
 
 a:hover {
-    color: $color2;
+    color: $color5;
 }
 
-.titel {
-    font-family: $fontset2;
-    color: $color1;
-    font-weight: 700;
-    font-size: 20px;
-    margin-top: -20px;
-}
 
 .achtergrondkl {
-    background-image: url('../images/doneer1.png');
-    float: right;
+    background-color: $color7;
+    text-align: center;
+    margin-top: 80px;
 }
 
-
 .btn-doneer {
-    background-color: $color1 !important;
-    color: $color5;
+    background-color: $color8 !important;
+    color: $color6;
     border: none;
     padding: 5%;
     border-radius: 20px;
     margin-top: 7%;
+    margin-bottom: 7%;
     margin-left: 7%;
 }
 
 .btn-doneerform {
-    background-color: $color1 !important;
-    color: $color5;
+    background-color: $color8 !important;
+    color: $color6;
     border: none;
     padding: 5%;
     border-radius: 20px;
     margin-top: 7%;
-    margin-left: 2%;
+    margin-bottom: 7%;
+    margin-left: 4%;
+    margin-right: 4%;
     width: 90%;
 
 }
@@ -695,12 +599,14 @@ a:hover {
 .form-control {
     background-color: $color5;
     border: none;
-    margin: 2%;
+    margin-bottom: 7%;
+
 }
 
 .form-check-label {
     color: $color5;
     font-size: 12px;
+
 }
 
 .pad {
@@ -713,21 +619,13 @@ a:hover {
     font-weight: 800;
 }
 
-#stripe {
-    border-left: $color1 5px solid;
-    width: 0;
-    height: 4em;
-
-}
-
 .spac {
-    margin-top: 10%;
+    margin-top: 40px;
 
 }
 
 
 /* Footer */
-
 
 footer.foeter {
     padding: 0 20px;
@@ -753,9 +651,8 @@ footer.foeter {
                 line-height: 60px;
                 color: $color5;
                 margin: 0.5rem;
-                
-            }
 
+            }
         }
 
         .linkerkant {

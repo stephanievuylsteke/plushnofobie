@@ -621,17 +621,6 @@ h1 {
   }
 }
 
-.btn-verzendcontact {
-  background-color: #646BEB;
-  border-radius: 30px;
-  padding: 10px;
-  color: white;
-  padding-left: 40px;
-  padding-right: 40px;
-  border-color: none;
-  width: 100%;
-}
-
 /* donation forms */
 @media (max-width: 1200px) {
   .donatie {

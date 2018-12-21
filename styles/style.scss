@@ -33,6 +33,15 @@ $breekpunt3: 1200px;
 
 p {
     color: $color6;
+    font-size: 14px;
+
+    @media (min-width: $breekpunt2) {
+        font-size: 16px;
+    }
+
+    @media (min-width:$breekpunt3) {
+        font-size: 18px;
+    }
 }
 
 h1 {
@@ -337,8 +346,8 @@ h1 {
                 padding: 10px 80px;
                 margin-top: 20px;
 
-                @media (max-width: $breekpunt3) {
-                    width: 100%;
+                @media (min-width: $breekpunt3) {
+                    width: 50%;
 
                 }
             }
@@ -348,13 +357,18 @@ h1 {
 
 }
 
+.next {
+    display: flex;
+}
+
 /* ZELFHULPGROEP*/
-.teddy{
+.teddy {
     @media (max-width: $breekpunt3) {
         margin-top: -20%;
     }
 
 }
+
 /* flipcards*/
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
@@ -383,12 +397,13 @@ h1 {
         padding-top: 30px;
         padding-left: 20px;
         padding-right: 20px;
+        font-size: 1rem;
     }
 
     .contactme {
         background-color: $color1;
         padding-top: 20px;
-        padding-bottom: 2px;
+        padding-bottom: 10px;
 
         .a {
             color: $color5 !important;
@@ -449,64 +464,68 @@ h1 {
 
     }
 
-    .btnhelp {
-        background-color: $color1;
-        border: none;
-        color: $color5;
-        padding: 10px 40px;
-        border-radius: 30px;
+    .upload-btn-wrapper {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
 
         @media (max-width: $breekpunt3) {
             text-align: center;
-            margin: 0 auto;
             width: 100%;
-            margin-top: 20px;
-            margin-bottom: 20px;
         }
+
+    }
+
+    .upload-btn-wrapper input[type=file] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    .btn {
+        border: 1px solid $color4;
+        color: $color3;
+        background-color: $color5;
+        padding: 8px 20px;
+        border-radius: 30px;
+
+        @media (max-width: $breekpunt3) {
+            width: 100%;
+
+        }
+
+        .btnhelp {
+            background-color: $color1;
+            border: none;
+            color: $color5;
+            padding: 10px 40px;
+            border-radius: 30px;
+
+            @media (max-width: $breekpunt3) {
+                text-align: center;
+                margin: 0 auto;
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+
     }
 
 
-}
 
-.upload-btn-wrapper {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-
-    @media (max-width: $breekpunt3) {
-        text-align: center;
-        width: 100%;
-    }
 
 }
 
-.btn {
-    border: 1px solid $color4;
-    color: $color3;
-    background-color: $color5;
-    padding: 8px 20px;
-    border-radius: 30px;
-
-
-    @media (max-width: $breekpunt3) {
-        width: 100%;
-
-    }
-}
-
-.upload-btn-wrapper input[type=file] {
-    font-size: 100px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-}
 
 /* CONTACT pagina*/
 
 .contact-section {
     background-color: $color2;
-    
+
 }
 
 .contact-section-back {
@@ -668,100 +687,112 @@ a:hover {
 
     }
 }
+
 .btn-doneer {
+    background-color: $color8 !important;
+    color: $color6;
+    border: none;
+    margin: 0 auto;
+    padding: 20px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
+
+}
+
+.btn-doneerform {
     background-color: $color8 !important;
     color: $color6;
     border: none;
     padding: 5%;
     border-radius: 20px;
-    margin: 7%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    margin-left: 4%;
+    margin-right: 4%;
+    width: 100%;
 
-    .btn-help {
-        @media (max-width: $breekpunt3) {
-            margin-top: 0%;
-            margin-bottom: 0%;
-            margin-left: 0%;
-        }
+
+}
+
+.form-control {
+    background-color: $color5;
+    border: none;
+    margin-bottom: 2%;
+
+}
+
+.form-check-label {
+    color: $color5;
+    font-size: 12px;
+
+}
+
+.pad {
+    padding-top: 30px;
+}
+
+.streep {
+    @media (max-width: 777px) {
+        display: none;
     }
 }
 
-    .btn-doneerform {
-        background-color: $color8 !important;
-        color: $color6;
-        border: none;
-        padding: 5%;
-        border-radius: 20px;
-        margin-top: 7%;
-        margin-bottom: 7%;
-        margin-left: 4%;
-        margin-right: 4%;
-        width: 90%;
+.cijfer {
+    color: $color1;
+    font-size: 60px;
+    font-weight: 800;
 
-
+    @media(min-width: $breekpunt2) {
+        font-size: 40px;
     }
 
-    .form-control {
-        background-color: $color5;
-        border: none;
-        margin-bottom: 2%;
-
-    }
-
-    .form-check-label {
-        color: $color5;
-        font-size: 12px;
-
-    }
-
-    .pad {
-        padding-top: 30px;
-    }
-
-    .cijfer {
-        color: $color1;
+    @media (min-width: $breekpunt3) {
         font-size: 60px;
-        font-weight: 800;
     }
+}
 
-    .spac {
-        margin-top: 40px;
+.spac {
+    margin-top: 40px;
 
-    }
+}
 
 
-    /* Footer */
+/* Footer */
 
-    footer.foeter {
-        padding: 0 20px;
-        bottom: 0px;
+footer.foeter {
+    padding: 0 20px;
+    bottom: 0px;
+    width: 100%;
+    height: 80px;
+    background-color: $color1;
+    display: flex;
+
+    .footer_container {
         width: 100%;
-        height: 80px;
-        background-color: $color1;
+        height: 100%;
         display: flex;
-
-        .footer_container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: $color5;
-            font-family: $fontset2;
+        justify-content: space-between;
+        align-items: center;
+        color: $color5;
+        font-family: $fontset2;
 
 
-            a {
-                i {
-                    font-size: 1em;
-                    line-height: 60px;
-                    color: $color5;
-                    margin: 0.5rem;
-
-                }
-            }
-
-            .linkerkant {
+        a {
+            i {
+                font-size: 1em;
                 line-height: 60px;
                 color: $color5;
+                margin: 0.5rem;
+
             }
         }
+
+        .linkerkant {
+            line-height: 60px;
+            color: $color5;
+        }
     }
+}

@@ -10,6 +10,19 @@
 /*Titels/Paragrafen*/
 p {
   color: black;
+  font-size: 14px;
+}
+
+@media (min-width: 650px) {
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  p {
+    font-size: 18px;
+  }
 }
 
 h1 {
@@ -341,10 +354,16 @@ h1 {
   margin-top: 20px;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .card-body .hoofdkolom .tekstvlak .btn-primary-doneer {
-    width: 100%;
+    width: 50%;
   }
+}
+
+.next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* ZELFHULPGROEP*/
@@ -386,12 +405,13 @@ h1 {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 1rem;
 }
 
 .flip-card-back .contactme {
   background-color: #646BEB;
   padding-top: 20px;
-  padding-bottom: 2px;
+  padding-bottom: 10px;
 }
 
 .flip-card-back .contactme .a {
@@ -457,38 +477,28 @@ h1 {
   }
 }
 
-.contact-formular .btnhelp {
-  background-color: #646BEB;
-  border: none;
-  color: white;
-  padding: 10px 40px;
-  border-radius: 30px;
-}
-
-@media (max-width: 1200px) {
-  .contact-formular .btnhelp {
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-}
-
-.upload-btn-wrapper {
+.contact-formular .upload-btn-wrapper {
   position: relative;
   overflow: hidden;
   display: inline-block;
 }
 
 @media (max-width: 1200px) {
-  .upload-btn-wrapper {
+  .contact-formular .upload-btn-wrapper {
     text-align: center;
     width: 100%;
   }
 }
 
-.btn {
+.contact-formular .upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.contact-formular .btn {
   border: 1px solid #DCDCDC;
   color: #5B5A5C;
   background-color: white;
@@ -497,17 +507,27 @@ h1 {
 }
 
 @media (max-width: 1200px) {
-  .btn {
+  .contact-formular .btn {
     width: 100%;
   }
 }
 
-.upload-btn-wrapper input[type=file] {
-  font-size: 100px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
+.contact-formular .btn .btnhelp {
+  background-color: #646BEB;
+  border: none;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 30px;
+}
+
+@media (max-width: 1200px) {
+  .contact-formular .btn .btnhelp {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 /* CONTACT pagina*/
@@ -677,17 +697,11 @@ a:hover {
   background-color: #F0CCA0 !important;
   color: black;
   border: none;
-  padding: 5%;
+  margin: 0 auto;
+  padding: 20px 20px;
   border-radius: 20px;
-  margin: 7%;
-}
-
-@media (max-width: 1200px) {
-  .btn-doneer .btn-help {
-    margin-top: 0%;
-    margin-bottom: 0%;
-    margin-left: 0%;
-  }
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .btn-doneerform {
@@ -700,7 +714,7 @@ a:hover {
   margin-bottom: 7%;
   margin-left: 4%;
   margin-right: 4%;
-  width: 90%;
+  width: 100%;
 }
 
 .form-control {
@@ -718,10 +732,28 @@ a:hover {
   padding-top: 30px;
 }
 
+@media (max-width: 777px) {
+  .streep {
+    display: none;
+  }
+}
+
 .cijfer {
   color: #646BEB;
   font-size: 60px;
   font-weight: 800;
+}
+
+@media (min-width: 650px) {
+  .cijfer {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cijfer {
+    font-size: 60px;
+  }
 }
 
 .spac {

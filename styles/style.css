@@ -350,7 +350,6 @@ h1 {
   background-color: #646BEB;
   color: white;
   border-radius: 40px;
-  padding: 10px 80px;
   margin-top: 20px;
 }
 
@@ -512,7 +511,7 @@ h1 {
   }
 }
 
-.contact-formular .btn .btnhelp {
+.contact-formular .btnhelp {
   background-color: #646BEB;
   border: none;
   color: white;
@@ -521,7 +520,7 @@ h1 {
 }
 
 @media (max-width: 1200px) {
-  .contact-formular .btn .btnhelp {
+  .contact-formular .btnhelp {
     text-align: center;
     margin: 0 auto;
     width: 100%;
